@@ -6,5 +6,5 @@
     "es7.classProperties"
   ],
   "sourceMaps": "inline",
-  "plugins": ["../dogo-server/gulp/util/babelRelayPlugin"]
+  "plugins": ["./build/babelRelayPlugin"]
 }

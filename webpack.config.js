@@ -62,12 +62,6 @@ const development = assign({}, common, {
     loaders: [
       cssLoader,
       {
-        test: /\.jsx$/,
-        loader: 'babel',
-        query: { stage: 0, plugins: ['../dogo-server/gulp/util/babelRelayPlugin'] },
-        include: path.join(__dirname, config.inputDir)
-      },
-      {
         test: /\.jsx?$/,
         loaders: ['source-map-loader', 'react-hot', 'babel'],
         include: path.join(__dirname, config.inputDir)
@@ -93,8 +87,7 @@ const production = assign({}, common, {
       {
         test: /\.jsx?$/,
         loader: 'babel',
-        include: path.join(__dirname, config.inputDir),
-        query: { stage: 0, plugins: ['../dogo-server/gulp/util/babelRelayPlugin'] }
+        include: path.join(__dirname, config.inputDir)
       }
     ]
   }
