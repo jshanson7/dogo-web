@@ -1,0 +1,10 @@
+{
+  "stage": 0,
+  "optional": [
+    "runtime",
+    "es7.decorators",
+    "es7.classProperties"
+  ],
+  "sourceMaps": "inline",
+  "plugins": ["../dogo-server/gulp/util/babelRelayPlugin"]
+}
