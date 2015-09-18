@@ -7,5 +7,6 @@ module.exports = {
   entry: './src/index',
   inputDir: 'src',
   outputDir: 'dist',
-  outputFile: 'bundle'
+  outputFile: 'bundle',
+  graphqlServer: 'http://localhost:1337/graphql'
 };
