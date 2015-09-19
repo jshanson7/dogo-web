@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node --harmony devServer",
     "build": "NODE_ENV=production node --harmony node_modules/.bin/webpack",
-    "lint": "node --harmony node_modules/.bin/eslint -c .eslintrc src"
+    "lint": "node --harmony node_modules/.bin/eslint src"
   },
   "author": "Jeff Hanson",
   "license": "MIT",
