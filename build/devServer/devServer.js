@@ -10,7 +10,7 @@ devServer.start = start;
 if (!module.parent) { start(); }
 
 export function start() {
-  devServer.listen(port, host, () =>
+  return devServer.listen(port, host, () =>
     console.log(`devServer listening at ${host}:${port}/webpack-dev-server/`)
   );
 }

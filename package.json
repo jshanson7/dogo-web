@@ -2,7 +2,7 @@
   "name": "dogo-web",
   "version": "1.0.0",
   "private": true,
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "start": "npm run dev",
     "build": "npm run webpack && npm run uglifyjs",
@@ -62,6 +62,7 @@
   },
   "babel": {
     "stage": 0,
+    "optional": ["runtime"],
     "plugins": ["dogo-server/lib/plugins/schema"]
   }
 }

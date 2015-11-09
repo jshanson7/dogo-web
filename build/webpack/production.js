@@ -1,5 +1,4 @@
-import { config, entry, plugins, preLoaders, loaders } from './common';
-import { inputDir } from '../../config';
+import { config, entry, plugins, preLoaders, loaders, inputDir } from './common';
 
 export default Object.assign({}, config, {
   entry: [entry],
