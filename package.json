@@ -32,6 +32,7 @@
     "css-loader": "^0.18.0",
     "cssnext-loader": "^1.0.1",
     "csswring": "^4.0.0",
+    "dogo-server": "jshanson7/dogo-server",
     "eslint": "^1.5.0",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^3.4.2",
@@ -41,7 +42,7 @@
     "image-webpack-loader": "^1.6.1",
     "imagemin": "^3.2.0",
     "jade": "^1.11.0",
-    "dogo-server": "jshanson7/dogo-server",
+    "json-loader": "^0.5.3",
     "mocha": "^2.3.3",
     "postcss-calc": "^5.0.0",
     "postcss-functions": "^1.0.0",
@@ -62,7 +63,11 @@
   },
   "babel": {
     "stage": 0,
-    "optional": ["runtime"],
-    "plugins": ["dogo-server/lib/plugins/schema"]
+    "optional": [
+      "runtime"
+    ],
+    "plugins": [
+      "dogo-server/lib/plugins/schema"
+    ]
   }
 }

@@ -24,7 +24,10 @@ export const config = {
   },
   resolve: {
     root: inputDir,
-    extensions: ['', '.js', '.jsx', '.css', '.jade']
+    extensions: ['', '.js', '.jsx', '.css', '.jade'],
+    alias: {
+      config: resolve(__dirname, '../../config', process.env.NODE_ENV)
+    }
   },
   postcss: [
     functions({ functions: cssFunctions }),
