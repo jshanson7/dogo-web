@@ -1,0 +1,1 @@
+export bemClasser from './bemClasser';

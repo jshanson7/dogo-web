@@ -1,0 +1,6 @@
+@import '../mixins/layout';
+
+.Dogo {
+  @mixin fullHeightWidth;
+  @mixin centerContent;
+}

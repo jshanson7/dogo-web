@@ -10,9 +10,14 @@ env:
 
 globals:
   document: false
+  require: false
   describe: false
   it: false
   before: false
+  module: false
+  exports: false
+  process: false
+  __dirname: false
 
 ecmaFeatures:
   jsx: true
@@ -110,7 +115,7 @@ rules:
   no-undef: 2
   no-unreachable: 2
   no-unused-expressions: 2
-  # no-unused-vars: [2, {vars: all, args: after-used}]
+  no-unused-vars: [2, {vars: all, args: after-used}]
   no-void: 2
   no-with: 2
   one-var: [2, never]
