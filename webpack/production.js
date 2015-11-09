@@ -5,10 +5,13 @@ export default Object.assign({}, config, {
   plugins: plugins,
   module: {
     preLoaders: preLoaders,
-    loaders: loaders.concat({
-      test: /\.jsx?$/,
-      loader: 'babel',
-      include: inputDir
-    })
+    loaders: [
+      ...loaders,
+      {
+        test: /\.jsx?$/,
+        loader: 'babel',
+        include: inputDir
+      }
+    ]
   }
 });

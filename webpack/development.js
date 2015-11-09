@@ -7,17 +7,22 @@ export default Object.assign({}, config, {
   entry: [
     `webpack-dev-server/client?http://${host}:${port}`,
     'webpack/hot/only-dev-server',
-  ].concat(entry),
+    entry
+  ],
   plugins: [
     new HotModuleReplacementPlugin(),
-    new NoErrorsPlugin()
-  ].concat(plugins),
+    new NoErrorsPlugin(),
+    ...plugins
+  ],
   module: {
     preLoaders: preLoaders,
-    loaders: loaders.concat({
-      test: /\.jsx?$/,
-      loaders: ['source-map-loader', 'react-hot', 'babel'],
-      include: inputDir
-    })
+    loaders: [
+      ...loaders,
+      {
+        test: /\.jsx?$/,
+        loaders: ['source-map-loader', 'react-hot', 'babel'],
+        include: inputDir
+      }
+    ]
   }
 });
