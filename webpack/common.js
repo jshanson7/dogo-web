@@ -9,11 +9,11 @@ import csswring from 'csswring';
 import { compile as compileJade } from 'jade';
 import ExtractTextPlugin, { extract as extractText } from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import cssFunctions from '../../src/mixins/cssFunctions';
+import cssFunctions from '../src/mixins/cssFunctions';
 
-export const entry = resolve(__dirname, '../../src/index.js');
-export const inputDir = resolve(__dirname, '../../src');
-export const outputDir = resolve(__dirname, '../../dist');
+export const entry = resolve(__dirname, '../src/index.js');
+export const inputDir = resolve(__dirname, '../src');
+export const outputDir = resolve(__dirname, '../dist');
 export const outputFile = 'bundle';
 
 export const config = {
@@ -26,7 +26,7 @@ export const config = {
     root: inputDir,
     extensions: ['', '.js', '.jsx', '.css', '.jade'],
     alias: {
-      config: resolve(__dirname, '../../config', process.env.NODE_ENV)
+      config: resolve(__dirname, '../config', process.env.NODE_ENV)
     }
   },
   postcss: [

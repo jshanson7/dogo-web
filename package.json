@@ -6,11 +6,11 @@
   "scripts": {
     "start": "npm run dev",
     "build": "npm run webpack && npm run uglifyjs",
-    "dev": "NODE_ENV=development node build/devServer",
+    "dev": "NODE_ENV=development node webpack/dev-server",
     "test": "npm run lint && node_modules/.bin/mocha test/**/*.test.js",
     "test-watch": "npm run lint && node_modules/.bin/mocha --watch",
     "lint": "node_modules/.bin/eslint .",
-    "webpack": "NODE_ENV=production node_modules/.bin/webpack --config build/webpack",
+    "webpack": "NODE_ENV=production node_modules/.bin/webpack --config webpack",
     "uglifyjs": "node_modules/.bin/uglifyjs dist/bundle.js -c -m -o dist/bundle.js"
   },
   "author": "Jeff Hanson",

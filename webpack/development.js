@@ -1,6 +1,6 @@
 import { HotModuleReplacementPlugin, NoErrorsPlugin } from 'webpack';
 import { inputDir, config, entry, plugins, preLoaders, loaders } from './common';
-import { host, port } from '../devServer/config';
+import { host, port } from './dev-server/config';
 
 export default Object.assign({}, config, {
   devtool: 'eval-source-map',
