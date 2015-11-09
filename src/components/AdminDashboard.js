@@ -21,6 +21,15 @@ class AdminDashboard extends Component {
           )}
         </ul>
       </div>
+
+      <div>
+        <div>Dogs</div>
+        <ul>
+          {this.props.app.dogs.edges.map(edge =>
+            <li key={edge.node.id}>{edge.node.name}</li>
+          )}
+        </ul>
+      </div>
     </div>;
   }
 }
@@ -35,10 +44,18 @@ export default Relay.createContainer(AdminDashboard, {
               id,
               first_name,
               last_name,
-            },
-          },
+            }
+          }
         },
         shelters(first: 200) {
+          edges {
+            node {
+              id,
+              name,
+            }
+          }
+        },
+        dogs(first: 200) {
           edges {
             node {
               id,

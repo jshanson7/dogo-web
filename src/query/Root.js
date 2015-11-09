@@ -1,6 +1,6 @@
 import Relay from 'react-relay';
 
-export default class HomeRoute extends Relay.Route {
+export default class Root extends Relay.Route {
   static queries = {
     app: () => Relay.QL`
       query {
@@ -9,5 +9,5 @@ export default class HomeRoute extends Relay.Route {
     `,
   };
   // static paramDefinitions = {};
-  static routeName = 'HomeRoute';
+  static routeName = 'Root';
 }

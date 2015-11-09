@@ -1,20 +1,16 @@
-import './Dogo.css';
 import React, { Component } from 'react';
-import Relay from 'react-relay';
+import Relay, { createContainer } from 'react-relay';
 import AdminDashboard from './AdminDashboard';
-import { bemClasser } from '../utils';
-
-const bem = bemClasser('Dogo');
 
 class Dogo extends Component {
   render() {
-    return <div className={bem()}>
+    return <div>
       <AdminDashboard { ...this.props }/>
     </div>;
   }
 }
 
-export default Relay.createContainer(Dogo, {
+export default createContainer(Dogo, {
   fragments: {
     app: () => Relay.QL`
       fragment on App {
@@ -23,3 +19,4 @@ export default Relay.createContainer(Dogo, {
     `,
   },
 });
+
