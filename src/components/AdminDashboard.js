@@ -30,6 +30,15 @@ class AdminDashboard extends Component {
           )}
         </ul>
       </div>
+
+      <div>
+        <div>Notes</div>
+        <ul>
+          {this.props.app.notes.edges.map((edge, index) =>
+            <li key={edge.node.id}>{index}: {edge.node.text}</li>
+          )}
+        </ul>
+      </div>
     </div>;
   }
 }
@@ -60,6 +69,14 @@ export default Relay.createContainer(AdminDashboard, {
             node {
               id,
               name,
+            }
+          }
+        },
+        notes(first: 1000) {
+          edges {
+            node {
+              id,
+              text,
             }
           }
         }
